@@ -39,33 +39,37 @@
         }
 
         function processSignUp() {
-
-
-            // Instantiating EasyHTTP
-            const http = new EasyHTTP;
-            // Data for post request
-            const postData = {
-                userid : document.getElementById( "userId" ).value ,
-                name :  document.getElementById("name").value,
-                mobileNo : document.getElementById('mobileNo').value,
-                place : document.getElementById('place').value
-            };
-            // Post prototype method
-            http.post(
-                'https://jsonplaceholder.typicode.com/users',
-                postData)
-                // resolving promise for response data
-                .then(data => displayResult('POST Request:', data))
-                // resolving promise for error
-                .catch(err => console.error('POST Error:', err));
+            let myForm = document.getElementById('myForm');
+            let isValid = myForm.checkValidity();
+            if (!isValid) {
+                alert("Please fill all fields");
+            } else {
+                // Instantiating EasyHTTP
+                const http = new EasyHTTP;
+                // Data for post request
+                const postData = {
+                    userid: document.getElementById("userId").value,
+                    name: document.getElementById("name").value,
+                    mobileNo: document.getElementById('mobileNo').value,
+                    place: document.getElementById('place').value
+                };
+                // Post prototype method
+                http.post(
+                    'https://jsonplaceholder.typicode.com/users',
+                    postData)
+                    // resolving promise for response data
+                    .then(data => displayResult('POST Request:', data))
+                    // resolving promise for error
+                    .catch(err => console.error('POST Error:', err));
+            }
         }
         // Function to display results
         function displayResult(title, data) {
             const resultDiv = document.getElementById('result');
             resultDiv.innerHTML = `<strong>${title}</strong><br>${JSON.stringify(data,
                 null, 2)}<br><br>`;
-        }
 
+        }
     </script>
 </head>
 
@@ -111,7 +115,7 @@
                     <div class="card-body">
                         <h4>Sign Up</h4>
 
-                        <form>
+                        <form id="myForm">
                             <div class="mb-3">
                                 <label for="userId" class="form-label">UserId</label>
                                 <input type="text" class="form-control" id="userId">
@@ -137,7 +141,7 @@
                                 </label>
                             </div>
                             <div class="mt=3">
-                                <button type="button" onclick="processSignUp()" class="btn btn-primary">Sign Up</button>
+                                <button type="submit" onclick="processSignUp()" class="btn btn-primary">Sign Up</button>
                             </div>
                         </form>
 
