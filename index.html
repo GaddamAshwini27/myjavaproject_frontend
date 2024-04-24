@@ -24,15 +24,11 @@
             padding-top: 20px;
         }
 
-        .myul {
-            list-style: none;
-            padding: 0px;
-          
-        }
-
-        .myanchor {
+        
+        .myanchor{
+            list-style:  none;
             text-decoration: none;
-            color: aquamarine;
+            color: aqua;
         }
     </style>
 </head>
@@ -48,7 +44,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active text-white" aria-current="page" href="html/home.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
@@ -147,41 +143,35 @@
         </div>
     </div>
     <footer>
-        <div class="container-fluid mt-3 pt-3"  style="background-color:rgb(142, 130, 130);">
-            <div class="row justify-content-around ">
+        <div class="container-fluid mt-3 pt-3" style="background-color:rgb(142, 130, 130);">
+            <div class="row justify-content-around text-white">
                 <div class="col-2">
-                    <div>
-                        <h5 style="color: yellow;">Quick Links</h5>
-
-                        <ul class="myul">
-                            <li><a class="myanchor" href="#">Home</a></li>
-                            <li><a class="myanchor" href="#">Sign In</a></li>
-                            <li><a class="myanchor" href="#">Sign Up</a></li>
-                        </ul>
-                    </div>
+                    <h2 style="color: gold;">Our Services</h2>
+                    <ul class="myul">
+                        <li><a class="myanchor" href="html/borrow.html">Book borrowing</a></li>
+                        <li><a class="myanchor" href="html/catalog.html">Online catalog access</a></li>
+                        <li><a class="myanchor" href="html/reservation.html">Study rooms reservation</a></li>
+                        <!-- Add more services as needed -->
+                    </ul>
                 </div>
                 <div class="col-2">
-                    <div>
-                        <h5 style="color: yellow;">Contact Us</h5>
-                        <ul class="myul">
-                            <li><a class="myanchor" href="#">Administrator</a></li>
-                            <li><a class="myanchor" href="#">Library</a></li>
-                            <li><a class="myanchor" href="#">Feedback</a></li>
-                        </ul>
-                    </div>
+                    <h2 style="color: gold;">Contact Us</h2>
+                    <p>If you have any questions or need assistance, feel free to contact us:</p>
+                    <ul>
+                        <li>Email: <a class="myanchor" href="mailto:library@example.com">library@example.com</a></li>
+                        <li>Phone: <a class="myanchor" href="tel:1234567890">123-456-7890</a></li>
+                        <li>Address: 123 Library St, City, Country</li>
+                    </ul>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col">
-                    <p class="text-center p-3"
-                        style="color: white; font-size: large;">
+                    <p class="text-center p-3" style="color:beige; font-size:large;">
                         &copy; Copyright 2024. All
                         rights reserved.</p>
                 </div>
             </div>
         </div>
-
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
