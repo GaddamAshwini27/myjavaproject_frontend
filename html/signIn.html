@@ -11,61 +11,19 @@
     <title>Sign In</title>
     <script>
 
-        class EasyHTTP {
-            // Make an HTTP GET Request
-            async get(url) {
-                // Awaiting for fetch response
-                const response = await fetch(url);
-                // Awaiting for response.json()
-                const resData = await response.json();
-                // Returning result data
-                return resData;
-            }
-            // Make an HTTP POST Request
-            async post(url, data) {
-                // Awaiting for fetch response and
-                // defining method, headers and body
-                const response = await fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                });
-                // Awaiting response.json()
-                const resData = await response.json();
-                // Returning result data
-                return resData;
-            }
-        }
-
+       
         function processSignIn() {
+            console.log("hello");
+            let myForm = document.getElementById('myForm');
+            let isValid = myForm.checkValidity();
+            if (!isValid) {
+                myForm.reportValidity();
 
-
-            // Instantiating EasyHTTP
-            const http = new EasyHTTP;
-            // Data for post request
-            const postData = {
-                userName: document.getElementById("adminName").value,
-                password: document.getElementById("password").value
-
-            };
-            // Post prototype method
-            http.post(
-                'https://jsonplaceholder.typicode.com/users',
-                postData)
-                // resolving promise for response data
-                .then(data => displayResult('POST Request:', data))
-                // resolving promise for error
-                .catch(err => console.error('POST Error:', err));
+            } else {
+                window.location.href = "user/indexUser.html";
+            }
         }
-        // Function to display results
-        function displayResult(title, data) {
-            const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = `<strong>${title}</strong><br>${JSON.stringify(data,
-                null, 2)}<br><br>`;
-        }
-
+        
     </script>
 
 
@@ -113,7 +71,7 @@
 
                     <div class="card-body">
                         <h4>Sign In</h4>
-                        <form>
+                        <form id="myForm">
                             <div class="mb-3">
                                 <label for="adminName" class="form-label">UserName</label>
                                 <input type="text" class="form-control" id="adminName">
@@ -127,6 +85,12 @@
                             <button type="reset" class="btn btn-primary">Reset</button>
 
                         </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div id=result>
                     </div>
                 </div>
             </div>

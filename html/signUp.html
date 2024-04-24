@@ -9,43 +9,17 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Library</title>
 
+    <script src="../js/myScript.js" type="text/javascript"></script>
+   
     <script>
-        class EasyHTTP {
-            // Make an HTTP GET Request
-            async get(url) {
-                // Awaiting for fetch response
-                const response = await fetch(url);
-                // Awaiting for response.json()
-                const resData = await response.json();
-                // Returning result data
-                return resData;
-            }
-            // Make an HTTP POST Request
-            async post(url, data) {
-                // Awaiting for fetch response and
-                // defining method, headers and body
-                const response = await fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                });
-                // Awaiting response.json()
-                const resData = await response.json();
-                // Returning result data
-                return resData;
-            }
-        }
 
         function processSignUp() {
             let myForm = document.getElementById('myForm');
             let isValid = myForm.checkValidity();
             if (!isValid) {
-                alert("Please fill all fields");
+                myForm.reportValidity();
             } else {
-                // Instantiating EasyHTTP
-                const http = new EasyHTTP;
+               
                 // Data for post request
                 const postData = {
                     userid: document.getElementById("userId").value,
@@ -53,24 +27,14 @@
                     mobileNo: document.getElementById('mobileNo').value,
                     place: document.getElementById('place').value
                 };
-                // Post prototype method
-                http.post(
-                    'https://jsonplaceholder.typicode.com/users',
-                    postData)
-                    // resolving promise for response data
-                    .then(data => displayResult('POST Request:', data))
-                    // resolving promise for error
-                    .catch(err => console.error('POST Error:', err));
+
+                sendRequest(postData);
+
             }
         }
-        // Function to display results
-        function displayResult(title, data) {
-            const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = `<strong>${title}</strong><br>${JSON.stringify(data,
-                null, 2)}<br><br>`;
 
-        }
     </script>
+
 </head>
 
 <body>
@@ -141,7 +105,7 @@
                                 </label>
                             </div>
                             <div class="mt=3">
-                                <button type="submit" onclick="processSignUp()" class="btn btn-primary">Sign Up</button>
+                                <button type="button" onclick="processSignUp()" class="btn btn-primary">Sign Up</button>
                             </div>
                         </form>
 
