@@ -24,15 +24,11 @@
             padding-top: 20px;
         }
 
-        .myul {
-            list-style: none;
-            padding: 0px;
-          
-        }
-
-        .myanchor {
+        
+        .myanchor{
+            list-style:  none;
             text-decoration: none;
-            color: aquamarine;
+            color: aqua;
         }
     </style>
 </head>
@@ -48,21 +44,21 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="home.html">Home</a>
+                        <a class="nav-link active text-white" aria-current="page" href="html/home.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">User</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="signIn.html">Sign In</a></li>
-                            <li><a class="dropdown-item" href="signUp.html">Sign Up</a></li>
+                            <li><a class="dropdown-item" href="../html/signIn.html">Sign In</a></li>
+                            <li><a class="dropdown-item" href="../html/signUp.html">Sign Up</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="admin/signInAdmin.html">Sign In</a></li>
+                            <li><a class="dropdown-item" href="../html/admin/signInAdmin.html">Sign In</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -81,13 +77,13 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/images/mylibrary.jpg" class="d-block w-100" height="400rem">
+                <img src="../images/mylibrary.jpg" class="d-block w-100" height="400rem">
             </div>
             <div class="carousel-item">
-                <img src="/images/library2.jpg" class="d-block w-100" height="400rem">
+                <img src="../images/library2.jpg" class="d-block w-100" height="400rem">
             </div>
             <div class="carousel-item">
-                <img src="/images/Author.jpg" class="d-block w-100" height="400rem">
+                <img src="../images/Author.jpg" class="d-block w-100" height="400rem">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -106,7 +102,7 @@
         <div class="row mt-1">
             <div class="col">
                 <div class="card d-flex" style="width: 15rem; height: 25rem;">
-                    <img src="/images/card1.jpg" class="card-img-top" style="height: 12rem;">
+                    <img src="../images/card1.jpg" class="card-img-top" style="height: 12rem;">
                     <div class="card-body">
                         <h5 class="card-title">MAKTUB</h5>
                         <p class="card-text">It's used to describe something that's meant to be Fate or Destiny</p>
@@ -116,7 +112,7 @@
             </div>
             <div class="col">
                 <div class="card d-flex " style="width: 15rem; height: 25rem;">
-                    <img src="/images/card2.jpg" class="card-img-top" style="height: 12rem;">
+                    <img src="../images/card2.jpg" class="card-img-top" style="height: 12rem;">
                     <div class="card-body">
                         <h5 class="card-title">HAPPILY NEVER AFTER</h5>
                         <p class="card-text">the novel introduces us to Sophie Steinbeck,a bride-to-be faced... </p>
@@ -126,7 +122,7 @@
             </div>
             <div class="col">
                 <div class="card d-flex" style="width: 15rem; height: 25rem;">
-                    <img src="/images/card3.jpg" class="card-img-top" style="height: 12rem;">
+                    <img src="../images/card3.jpg" class="card-img-top" style="height: 12rem;">
                     <div class="card-body">
                         <h5 class="card-title">THE WEALTH MONEY CAN'T BUY</h5>
                         <p class="card-text">True happiness comes from within,not from possessions...</p>
@@ -136,7 +132,7 @@
             </div>
             <div class="col">
                 <div class="card d-flex" style="width: 15rem; height: 25rem;">
-                    <img src="/images/card4.jpg" class="card-img-top" style="height: 12rem;">
+                    <img src="../images/card4.jpg" class="card-img-top" style="height: 12rem;">
                     <div class="card-body">
                         <h5 class="card-title">HOLLY JACKSON</h5>
                         <p class="card-text">A Good Girl's Guide to Murder(2019)</p>
@@ -147,41 +143,35 @@
         </div>
     </div>
     <footer>
-        <div class="container-fluid mt-3 pt-3"  style="background-color:rgb(142, 130, 130);">
-            <div class="row justify-content-around ">
+        <div class="container-fluid mt-3 pt-3" style="background-color:rgb(142, 130, 130);">
+            <div class="row justify-content-around text-white">
                 <div class="col-2">
-                    <div>
-                        <h5 style="color: yellow;">Quick Links</h5>
-
-                        <ul class="myul">
-                            <li><a class="myanchor" href="#">Home</a></li>
-                            <li><a class="myanchor" href="indexUser.html">Sign In</a></li>
-                            <li><a class="myanchor" href="#">Sign Up</a></li>
-                        </ul>
-                    </div>
+                    <h2 style="color: gold;">Our Services</h2>
+                    <ul class="myul">
+                        <li><a class="myanchor" href="html/borrow.html">Book borrowing</a></li>
+                        <li><a class="myanchor" href="html/catalog.html">Online catalog access</a></li>
+                        <li><a class="myanchor" href="html/reservation.html">Study rooms reservation</a></li>
+                        <!-- Add more services as needed -->
+                    </ul>
                 </div>
                 <div class="col-2">
-                    <div>
-                        <h5 style="color: yellow;">Contact Us</h5>
-                        <ul class="myul">
-                            <li><a class="myanchor" href="#">Administrator</a></li>
-                            <li><a class="myanchor" href="#">Library</a></li>
-                            <li><a class="myanchor" href="#">Feedback</a></li>
-                        </ul>
-                    </div>
+                    <h2 style="color: gold;">Contact Us</h2>
+                    <p>If you have any questions or need assistance, feel free to contact us:</p>
+                    <ul>
+                        <li>Email: <a class="myanchor" href="mailto:library@example.com">library@example.com</a></li>
+                        <li>Phone: <a class="myanchor" href="tel:1234567890">123-456-7890</a></li>
+                        <li>Address: 123 Library St, City, Country</li>
+                    </ul>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col">
-                    <p class="text-center p-3"
-                        style="color: white; font-size: large;">
+                    <p class="text-center p-3" style="color:beige; font-size:large;">
                         &copy; Copyright 2024. All
                         rights reserved.</p>
                 </div>
             </div>
         </div>
-
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
